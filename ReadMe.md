@@ -10,7 +10,7 @@ Some people just love the Office so much that they may need to create an applica
 * Lisa: Create repo, ReadMe
 #### TODO 
 * Create Character Database
-* Character Class
-* Character DAO with CRUD functionality
+* Jordyn: Character Class
+* Jordyn: Character DAO with CRUD functionality
 * Application class with routing
 * Test Class created 
