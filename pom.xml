@@ -135,9 +135,32 @@
       <artifactId>jackson-databind</artifactId>
       <version>${jackson-version}</version>
     </dependency>
+
+    <!-- Project Lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.18</version>
+      <scope>provided</scope>
+    </dependency>
+
   </dependencies>
+
+<profiles>
+    <profile>
+        <id>local</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <profile.name>local</profile.name>
+        </properties>
+    </profile>
+</profiles>
+
+
   <build>
-    <finalName>MealAndGroceryBuilder</finalName>
+    <finalName>OfficeCharacterAPI</finalName>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -186,6 +209,8 @@
               <artifactId>jackson-databind</artifactId>
               <version>${jackson-version}</version>
             </dependency>
+
+
           </dependencies>
         </plugin>
       </plugins>
