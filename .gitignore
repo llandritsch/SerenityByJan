@@ -35,7 +35,6 @@
 /target/
 /log/
 /lib/
-/profiles/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -51,3 +50,10 @@ fabric.properties
 
 #node stuff
 node_modules/
+
+# profiles
+/profiles/
+local.properties
+
+# logging (so we can all have our own until we get profiles to work for this)
+log4j2.properties
