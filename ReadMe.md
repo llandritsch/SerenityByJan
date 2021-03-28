@@ -9,7 +9,7 @@ Some people just love the Office so much that they may need to create an applica
 #### Production Plan:
 * Lisa: Create repo, ReadMe
 #### TODO 
-* Create Character Database
+* Tony: Create Character Database
 * Jordyn: Character Class
 * Jordyn: Character DAO with CRUD functionality
 * Application class with routing
