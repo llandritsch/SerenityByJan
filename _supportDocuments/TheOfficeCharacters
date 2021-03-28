@@ -1,0 +1,53 @@
+-- MySQL dump 10.13  Distrib 8.0.22, for macos10.15 (x86_64)
+--
+-- Host: 127.0.0.1    Database: Office_Characters
+-- ------------------------------------------------------
+-- Server version	8.0.22
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Characters`
+--
+
+DROP TABLE IF EXISTS `Characters`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Characters` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `character_name` varchar(50) NOT NULL,
+  `actor_name` varchar(50) NOT NULL,
+  `memorable_quote` varchar(300) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Characters`
+--
+
+LOCK TABLES `Characters` WRITE;
+/*!40000 ALTER TABLE `Characters` DISABLE KEYS */;
+INSERT INTO `Characters` VALUES (1,'Michael Scott','Steve Carell','That\'s what she said.'),(2,'Dwight Schrute','Rainn Wilson','Whenever I\'m about to do something, I think \'Would an idiot do that?\' And if they would, I do not do that thing.'),(3,'Jim Halpert','John Krasinski','My roommate wants to meet everybody. Because I’m pretty sure he thinks I’m making Dwight up. He is very real.'),(4,'Pam Beasley','Jenna fischer','They have new phone systems now that can ring directly to a salesman, or someone presses “star” and they go to accounting. Basically 95% of my job.'),(5,'Stanley Hudson','Leslie Baker','This is pretzel day.'),(6,'Phyllis Lapin','Phyllis Smith','We have a gym at home. It\'s called the bedroom.'),(7,'Angela Martin','Angela Kinsey','Without my cats, I am utterly and completely alone.'),(8,'Oscar Gutierrez','Oscar Nunez','What exactly is my responsibility here? To comfort insecure heterosexual men?'),(9,'Kevin Malone','Brian Baumgartner','Me think, why waste time say lot word, when few word do trick.'),(10,'Creed Bratton','Creed Bratton','If I can\'t scuba, then what\'s this all been about? What am I working toward?'),(11,'Meredith Palmer','Kate Flannery','I made a New Year\'s resolution that I\'m not going to drink anymore. During the week.'),(12,'Andy Bernard','Ed Helms','I wish there was a way to know you\'re in the good old days before you leave them.'),(13,'Toby Flenderson','Paul Lieberstein','My birthday was two months ago. There was no party.'),(14,'Kelly Kapoor','Mindy Kaling','I talk a lot, so I\'ve learned to just tune myself out.'),(15,'Gabe Lewis','Zach Woods','No one is a bigger fan of sexual touching than me.'),(16,'Ryan Howard','BJ Novak','Earth.  You don\'t have to be crazy to live here, but it helps.'),(17,'Erin Hannon','Ellie Kemper','You left me in charge of the pens, Pam.'),(18,'Roy Anderson','David Denman','Hey! They\'re playing our song, huh?'),(19,'Jan Levinson','Melora Hardin','There are always a million reasons not to do something.'),(20,'Darryl Philbin','Craig Robinson','I would date the hell out of me.');
+/*!40000 ALTER TABLE `Characters` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-03-28  6:47:16
