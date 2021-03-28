@@ -2,11 +2,11 @@
     <session-factory>
         <property name="connection.url">jdbc:mysql://localhost:3306/Test_Office_Characters?serverTimezone=UTC</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.username">${db.username}</property>
-        <!--        <property name="connection.password">thatsWhatSheSaid</property>-->
-        <property name="connection.password">${db.password}</property>
-<!--        <property name="connection.username">root</property>-->
-<!--        <property name="connection.password">709dearholt</property>-->
+<!--        <property name="connection.username">${db.username}</property>-->
+<!--        <property name="connection.password">${db.password}</property>-->
+        <property name="connection.username">root</property>
+<!--        <property name="connection.password">thatsWhatSheSaid</property>-->
+        <property name="connection.password">709dearholt</property>
         <property name="hibernate.c3p0.min_size">5</property>
         <property name="hibernate.c3p0.max_size">20</property>
         <property name="hibernate.c3p0.timeout">300</property>
