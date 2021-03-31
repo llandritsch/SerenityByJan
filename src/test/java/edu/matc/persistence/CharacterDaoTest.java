@@ -23,6 +23,12 @@ class CharacterDaoTest {
     @Test
     void getAllCharacters() {
         List<Character> characters = dao.getAllCharacters();
-        assertEquals(20, characters.size());
+        assertEquals(1, characters.size());
+    }
+
+    @Test
+    void getCharacterByName() {
+        List<Character> characters = dao.getCharacterByName("Michael Scott");
+        assertEquals(1, characters.size());
     }
 }

@@ -4,6 +4,7 @@ import edu.matc.entity.Character;
 import lombok.extern.log4j.Log4j2;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -60,6 +61,21 @@ public class CharacterDao {
         Character character = session.get(Character.class, ID);
         session.close();
         return character;
+    }
+
+    /**
+     * Creates a new character
+     * @param character
+     * @return id of newly added character
+     */
+    public int createCharacter(Character character) {
+        int id = 0;
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        id = (int)session.save(character);
+        transaction.commit();
+        session.close();
+        return id;
     }
 
 }
