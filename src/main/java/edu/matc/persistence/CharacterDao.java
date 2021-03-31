@@ -44,7 +44,7 @@ public class CharacterDao {
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Character> query = builder.createQuery(Character.class);
         Root<Character> root = query.from(Character.class);
-        Expression<String> propertyPath = root.get("character_name");
+        Expression<String> propertyPath = root.get("characterName");
         query.where(builder.like(propertyPath, "%" + character_name + "%"));
         List<Character> characters = session.createQuery(query).getResultList();
         session.close();
