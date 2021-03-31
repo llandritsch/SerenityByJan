@@ -58,3 +58,4 @@ local.properties
 # personal files for team project
 log4j2.properties
 hibernate.cfg.xml
+logs/

@@ -11,12 +11,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class CharacterDaoTest {
 
     CharacterDao dao;
+    int testCharId = 0;
 
     @BeforeEach
     void setUp() {
         edu.matc.test.util.Database database = edu.matc.test.util.Database.getInstance();
         database.runSQL("cleandb.sql");
-
         dao = new CharacterDao();
     }
 
@@ -31,4 +31,26 @@ class CharacterDaoTest {
         List<Character> characters = dao.getCharacterByName("Michael Scott");
         assertEquals(1, characters.size());
     }
+
+    @Test
+    void createCharacter() {
+        int numberOfCharacters = dao.getAllCharacters().size();
+        Character newCharacter = new Character();
+        newCharacter.setCharacterName("Chair Model");
+        newCharacter.setActorName("Brooke Dillman");
+        newCharacter.setMemorableQuote("none. She just sits in the chair...");
+        dao.createCharacter(newCharacter);
+        assertEquals(numberOfCharacters + 1, dao.getAllCharacters().size());
+    }
+
+    /*
+    @Test
+    void deleteCharacter() {
+        Character testCharacter = dao.getCharacterById(testCharId);
+        assertEquals(true, testCharacter != null);
+        dao.deleteCharacter(testCharacter);
+        assertEquals(null, dao.getCharacterById(testCharId));
+    }
+
+     */
 }
