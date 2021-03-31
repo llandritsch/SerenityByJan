@@ -15,6 +15,7 @@ class CharacterDaoTest {
     @BeforeEach
     void setUp() {
         edu.matc.test.util.Database database = edu.matc.test.util.Database.getInstance();
+        database.runSQL("cleandb.sql");
 
         dao = new CharacterDao();
     }
@@ -22,6 +23,12 @@ class CharacterDaoTest {
     @Test
     void getAllCharacters() {
         List<Character> characters = dao.getAllCharacters();
+        assertEquals(1, characters.size());
+    }
+
+    @Test
+    void getCharacterByName() {
+        List<Character> characters = dao.getCharacterByName("Michael Scott");
         assertEquals(1, characters.size());
     }
 }

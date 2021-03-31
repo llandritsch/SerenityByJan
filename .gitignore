@@ -55,5 +55,6 @@ node_modules/
 /profiles/
 local.properties
 
-# logging (so we can all have our own until we get profiles to work for this)
+# personal files for team project
 log4j2.properties
+hibernate.cfg.xml
