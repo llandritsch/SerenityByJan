@@ -33,6 +33,11 @@ public class CharacterDao {
         return characters;
     }
 
+    /**
+     * Gets a character by character name
+     * @param character_name
+     * @return characters by name
+     */
     public List<Character> getCharacterByName(String character_name) {
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
@@ -43,6 +48,18 @@ public class CharacterDao {
         List<Character> characters = session.createQuery(query).getResultList();
         session.close();
         return characters;
+    }
+
+    /**
+     * Gets a character by Id
+     * @param ID
+     * @return character
+     */
+    public Character getCharacterById(int ID) {
+        Session session = sessionFactory.openSession();
+        Character character = session.get(Character.class, ID);
+        session.close();
+        return character;
     }
 
 }
