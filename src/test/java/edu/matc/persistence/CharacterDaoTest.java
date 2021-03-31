@@ -18,6 +18,11 @@ class CharacterDaoTest {
         edu.matc.test.util.Database database = edu.matc.test.util.Database.getInstance();
         database.runSQL("cleandb.sql");
         dao = new CharacterDao();
+        Character newCharacter = new Character();
+        newCharacter.setCharacterName("test");
+        newCharacter.setActorName("test");
+        newCharacter.setMemorableQuote("test");
+        testCharId = dao.createCharacter(newCharacter);
     }
 
     @Test
@@ -43,7 +48,6 @@ class CharacterDaoTest {
         assertEquals(numberOfCharacters + 1, dao.getAllCharacters().size());
     }
 
-    /*
     @Test
     void deleteCharacter() {
         Character testCharacter = dao.getCharacterById(testCharId);
@@ -52,5 +56,4 @@ class CharacterDaoTest {
         assertEquals(null, dao.getCharacterById(testCharId));
     }
 
-     */
 }

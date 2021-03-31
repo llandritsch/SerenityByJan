@@ -78,4 +78,16 @@ public class CharacterDao {
         return id;
     }
 
+    /**
+     * deletes a character
+     * @param character
+     */
+    public void deleteCharacter(Character character) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.delete(character);
+        transaction.commit();
+        session.close();
+    }
+
 }
