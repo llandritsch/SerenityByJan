@@ -90,4 +90,15 @@ public class CharacterDao {
         session.close();
     }
 
+    /**
+     * updates an existing character
+     * @param character
+     */
+    public void updateCharacter(Character character) {
+        Session session = sessionFactory.openSession();
+        session.saveOrUpdate(character);
+        session.beginTransaction().commit();
+        session.close();
+    }
+
 }

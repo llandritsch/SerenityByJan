@@ -56,4 +56,13 @@ class CharacterDaoTest {
         assertEquals(null, dao.getCharacterById(testCharId));
     }
 
+    @Test
+    void updateCharacter() {
+        Character testCharacter = dao.getCharacterById(testCharId);
+        testCharacter.setCharacterName("newTestName");
+        dao.updateCharacter(testCharacter);
+        List<Character> updatedCharacter = dao.getCharacterByName("newTestName");
+        assertEquals(1, updatedCharacter.size());
+    }
+
 }
