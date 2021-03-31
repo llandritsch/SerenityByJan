@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
@@ -28,6 +29,18 @@ public class CharacterDao {
         Root<Character> root = query.from(Character.class);
         List<Character> characters = session.createQuery(query).getResultList();
 
+        session.close();
+        return characters;
+    }
+
+    public List<Character> getCharacterByName(String character_name) {
+        Session session = sessionFactory.openSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Character> query = builder.createQuery(Character.class);
+        Root<Character> root = query.from(Character.class);
+        Expression<String> propertyPath = root.get("character_name");
+        query.where(builder.like(propertyPath, "%" + character_name + "%"));
+        List<Character> characters = session.createQuery(query).getResultList();
         session.close();
         return characters;
     }
