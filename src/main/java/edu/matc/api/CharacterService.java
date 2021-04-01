@@ -15,12 +15,20 @@ import java.util.List;
 
 // TODO investigate characters that are showing up weird in output
 
+/**
+ * The type Character service.
+ */
 @Log4j2
 @Path("/characters")
 public class CharacterService {
 
     // JSON string reference: https://mkyong.com/java/how-to-convert-java-object-to-from-json-jackson/
 
+    /**
+     * Gets all characters.
+     *
+     * @return all characters
+     */
     @GET
     @Produces("application/json")
     public Response getAllCharacters() {
@@ -31,6 +39,12 @@ public class CharacterService {
         return Response.status(200).entity(output).build();
     }
 
+    /**
+     * Gets by character name.
+     *
+     * @param name the name
+     * @return the by character name
+     */
     @GET
     @Produces("application/json")
     @Path("{character}")
@@ -43,6 +57,12 @@ public class CharacterService {
 
     }
 
+    /**
+     * Gets by actor name.
+     *
+     * @param name the name
+     * @return the by actor name
+     */
     @GET
     @Produces("application/json")
     @Path("/actor/{actor}")
@@ -50,6 +70,32 @@ public class CharacterService {
         CharacterDao dao = new CharacterDao();
         List<Character> characters = dao.getCharacterByActorName(name);
         String output = formatFoundCharacters(characters);
+
+        return Response.status(200).entity(output).build();
+    }
+
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return the by id
+     */
+    @GET
+    @Produces("application/json")
+    @Path("/id/{id}")
+    public Response getById(@PathParam("id") int id) {
+        ObjectMapper mapper = new ObjectMapper();
+
+        CharacterDao dao = new CharacterDao();
+        Character character = dao.getCharacterById(id);
+
+        String output = "";
+
+        try {
+            output = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(character);
+        } catch (JsonProcessingException e){
+            log.error(e);
+        }
 
         return Response.status(200).entity(output).build();
     }
