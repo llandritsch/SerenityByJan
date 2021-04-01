@@ -8,6 +8,7 @@ import lombok.extern.log4j.Log4j2;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import java.util.List;
@@ -23,27 +24,42 @@ public class CharacterService {
     public Response getAllCharacters() {
         CharacterDao dao = new CharacterDao();
         List<Character> characters = dao.getAllCharacters();
-        ObjectMapper mapper = new ObjectMapper();
+        String output = formatFoundCharacters(characters);
 
-        String output = "";
+        return Response.status(200).entity(output).build();
+    }
+
+    @GET
+    @Path("{character}")
+    public Response getByCharacterName(@PathParam("character") String name) {
+        CharacterDao dao = new CharacterDao();
+        List<Character> characters = dao.getCharacterByName(name);
+        String output = formatFoundCharacters(characters);
+
+        return Response.status(200).entity(output).build();
+
+    }
+
+    /**
+     * Takes a list of characters and formats into a pretty JSON string
+     *
+     * @param characters list of characters
+     * @return JSON formatted string of found characters
+     */
+    public String formatFoundCharacters(List<Character> characters) {
+        ObjectMapper mapper = new ObjectMapper();
+        String foundCharacters = "";
 
         for (Character character : characters) {
             try {
                 String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(character);
-                output += jsonString;
+                foundCharacters += jsonString;
             } catch (JsonProcessingException e){
                 log.error(e);
             }
-
         }
 
-        return Response.status(200).entity(output).build();
+        return foundCharacters;
     }
-//
-//    public Response getCharacterByName() {
-//
-//        return Response.status(200).entity(output).build();
-//    }
-
 
 }
