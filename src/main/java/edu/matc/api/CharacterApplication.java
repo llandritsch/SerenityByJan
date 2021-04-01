@@ -5,8 +5,8 @@ import javax.ws.rs.core.Application;
 import java.util.HashSet;
 import java.util.Set;
 
-//TODO optional: change path name from service to something else?
-@ApplicationPath("/service")
+//TODO optional: Since only purpose is an API I am not including a path but we can change it!
+@ApplicationPath("/")
 
 public class CharacterApplication extends Application {
 

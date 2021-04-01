@@ -36,6 +36,12 @@ class CharacterDaoTest {
 //        List<Character> characters = dao.getCharacterByName("Michael Scott");
 //        assertEquals(1, characters.size());
 //    }
+
+    //    @Test
+//    void getCharacterByActorName() {
+//        List<Character> characters = dao.getCharacterByName("in");
+//        assertEquals(7, characters.size());
+//    }
 //
 //    @Test
 //    void createCharacter() {

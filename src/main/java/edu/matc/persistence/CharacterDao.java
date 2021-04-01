@@ -36,16 +36,33 @@ public class CharacterDao {
 
     /**
      * Gets a character by character name
-     * @param character_name
+     * @param characterName
      * @return characters by name
      */
-    public List<Character> getCharacterByName(String character_name) {
+    public List<Character> getCharacterByName(String characterName) {
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<Character> query = builder.createQuery(Character.class);
         Root<Character> root = query.from(Character.class);
         Expression<String> propertyPath = root.get("characterName");
-        query.where(builder.like(propertyPath, "%" + character_name + "%"));
+        query.where(builder.like(propertyPath, "%" + characterName + "%"));
+        List<Character> characters = session.createQuery(query).getResultList();
+        session.close();
+        return characters;
+    }
+
+    /**
+     * Gets a character by character name
+     * @param actorName
+     * @return characters by name
+     */
+    public List<Character> getCharacterByActorName(String actorName) {
+        Session session = sessionFactory.openSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Character> query = builder.createQuery(Character.class);
+        Root<Character> root = query.from(Character.class);
+        Expression<String> propertyPath = root.get("actorName");
+        query.where(builder.like(propertyPath, "%" + actorName + "%"));
         List<Character> characters = session.createQuery(query).getResultList();
         session.close();
         return characters;

@@ -13,6 +13,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
+// TODO investigate characters that are showing up weird in output
+
 @Log4j2
 @Path("/characters")
 public class CharacterService {
@@ -30,6 +32,7 @@ public class CharacterService {
     }
 
     @GET
+    @Produces("application/json")
     @Path("{character}")
     public Response getByCharacterName(@PathParam("character") String name) {
         CharacterDao dao = new CharacterDao();
@@ -39,6 +42,18 @@ public class CharacterService {
         return Response.status(200).entity(output).build();
 
     }
+
+    @GET
+    @Produces("application/json")
+    @Path("/actor/{actor}")
+    public Response getByActorName(@PathParam("actor") String name) {
+        CharacterDao dao = new CharacterDao();
+        List<Character> characters = dao.getCharacterByActorName(name);
+        String output = formatFoundCharacters(characters);
+
+        return Response.status(200).entity(output).build();
+    }
+
 
     /**
      * Takes a list of characters and formats into a pretty JSON string
@@ -58,7 +73,6 @@ public class CharacterService {
                 log.error(e);
             }
         }
-
         return foundCharacters;
     }
 
