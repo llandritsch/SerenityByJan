@@ -2,14 +2,14 @@ package edu.matc.api;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.xml.bind.v2.TODO;
 import edu.matc.entity.Character;
 import edu.matc.persistence.CharacterDao;
 import lombok.extern.log4j.Log4j2;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
+import javax.ws.rs.core.GenericEntity;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
@@ -121,5 +121,30 @@ public class CharacterService {
         }
         return foundCharacters;
     }
+
+    @POST
+    // check path with application
+    @Path("/newCharacter")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public Response createCharacter(
+            // not @FormParam ... still figuring this part out
+    ) {
+        CharacterDao dao = new CharacterDao();
+        Character character = new Character();
+        character.setCharacterName();
+        character.setActorName();
+        character.setMemorableQuote();
+        int id = dao.createCharacter(character);
+        if(id != 0) {
+            character.setId(id);
+            GenericEntity<Character> myEntity = new GenericEntity<Character>(character) {};
+            return Response.status(200).entity(myEntity).build();
+        } else {
+            return Response.status(500).build();
+        }
+    }
+
+
 
 }
