@@ -18,24 +18,19 @@ class CharacterDaoTest {
         edu.matc.test.util.Database database = edu.matc.test.util.Database.getInstance();
         database.runSQL("cleandb.sql");
         dao = new CharacterDao();
-        Character newCharacter = new Character();
-        newCharacter.setCharacterName("test");
-        newCharacter.setActorName("test");
-        newCharacter.setMemorableQuote("test");
-        testCharId = dao.createCharacter(newCharacter);
     }
 
-//    @Test
-//    void getAllCharacters() {
-//        List<Character> characters = dao.getAllCharacters();
-//        assertEquals(1, characters.size());
-//    }
-//
-//    @Test
-//    void getCharacterByName() {
-//        List<Character> characters = dao.getCharacterByName("Michael Scott");
-//        assertEquals(1, characters.size());
-//    }
+    @Test
+    void getAllCharacters() {
+        List<Character> characters = dao.getAllCharacters();
+        assertEquals(20, characters.size());
+    }
+
+    @Test
+    void getCharacterByName() {
+        List<Character> characters = dao.getCharacterByName("Michael Scott");
+        assertEquals(1, characters.size());
+    }
 
     //    @Test
 //    void getCharacterByActorName() {
