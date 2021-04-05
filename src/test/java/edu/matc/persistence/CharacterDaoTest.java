@@ -37,10 +37,6 @@ class CharacterDaoTest {
         @Test
     void getCharacterByActorName() {
         List<Character> characters = dao.getCharacterByActorName("in");
-        log.info("characters found by actor name");
-        for (Character character : characters) {
-            log.info("character : " + character);
-        }
         assertEquals(7, characters.size());
     }
 
