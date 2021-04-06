@@ -66,5 +66,5 @@ class CharacterDaoTest {
         List<Character> updatedCharacter = dao.getCharacterByName(newCharacterName);
         assertEquals(1, updatedCharacter.size());
     }
-
+    
 }
