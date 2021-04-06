@@ -148,11 +148,19 @@ public class CharacterService {
 
     //TODO fix response and param type
     @DELETE
-    @Path("characters/{character}")
+    @Path("characters/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String deleteUser(@PathParam("character") Character character) {
+    public Response deleteUser(@PathParam("id") int id) {
         CharacterDao dao = new CharacterDao();
-        dao.deleteCharacter(character);
+        int charactersBeforeDelete = dao.getAllCharacters().size();
+        Character characterToDelete = dao.getCharacterById(id);
+        dao.deleteCharacter(characterToDelete);
+        int charactersAfterDelete = dao.getAllCharacters().size();
+        if (charactersAfterDelete == charactersBeforeDelete - 1) {
+            return Response.status(200).build();
+        } else {
+            return Response.status(500).build();
+        }
     }
 
     @PUT
