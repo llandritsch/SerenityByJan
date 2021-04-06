@@ -7,7 +7,7 @@
 |3/31/21|Project troubleshooting|.5|Jordyn|
 |4/1/21|Created API service and Application classes and added API GET methods. Added DAO method and test for getting by actor name. Created time log and journal. |2.5|Jordyn|
 |4/3/21|Testing out the Week 10 steps to get the check in and checkout to work in GitHub.|0.5|Tony|
-|||||
+|4|5|21|8:15am - |
 |||||
 |||||
 |||||
