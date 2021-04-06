@@ -57,7 +57,7 @@ public class Database {
 
     public void connect() throws Exception {
         if (connection != null)
-            return;
+            //return;
 
         try {
             Class.forName(properties.getProperty("driver"));
