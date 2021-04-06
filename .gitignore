@@ -59,4 +59,7 @@ local.properties
 log4j2.properties
 hibernate.cfg.xml
 logs/
+
 database.properties
+
+

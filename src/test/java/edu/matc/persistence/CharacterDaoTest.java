@@ -1,6 +1,7 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.Character;
+import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -8,6 +9,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Log4j2
 class CharacterDaoTest {
 
     CharacterDao dao;
@@ -18,17 +20,12 @@ class CharacterDaoTest {
         edu.matc.test.util.Database database = edu.matc.test.util.Database.getInstance();
         database.runSQL("cleandb.sql");
         dao = new CharacterDao();
-        Character newCharacter = new Character();
-        newCharacter.setCharacterName("test");
-        newCharacter.setActorName("test");
-        newCharacter.setMemorableQuote("test");
-        testCharId = dao.createCharacter(newCharacter);
     }
 
     @Test
     void getAllCharacters() {
         List<Character> characters = dao.getAllCharacters();
-        assertEquals(21, characters.size());
+        assertEquals(20, characters.size());
     }
 
     @Test
@@ -39,8 +36,8 @@ class CharacterDaoTest {
 
         @Test
     void getCharacterByActorName() {
-        List<Character> characters = dao.getCharacterByActorName("er");
-        assertEquals(6, characters.size());
+        List<Character> characters = dao.getCharacterByActorName("in");
+        assertEquals(7, characters.size());
     }
 
     @Test
@@ -56,19 +53,18 @@ class CharacterDaoTest {
 
     @Test
     void deleteCharacter() {
-        Character testCharacter = dao.getCharacterById(testCharId);
-        assertEquals(true, testCharacter != null);
-        dao.deleteCharacter(testCharacter);
-        assertEquals(null, dao.getCharacterById(testCharId));
+        dao.deleteCharacter(dao.getCharacterById(3));
+        assertNull(dao.getCharacterById(3));
     }
 
     @Test
     void updateCharacter() {
-        Character testCharacter = dao.getCharacterById(testCharId);
-        testCharacter.setCharacterName("newTestName");
-        dao.updateCharacter(testCharacter);
-        List<Character> updatedCharacter = dao.getCharacterByName("newTestName");
+        String newCharacterName = "David Brent";
+        Character characterToUpdate = dao.getCharacterById(1);
+        characterToUpdate.setCharacterName(newCharacterName);
+        dao.updateCharacter(characterToUpdate);
+        List<Character> updatedCharacter = dao.getCharacterByName(newCharacterName);
         assertEquals(1, updatedCharacter.size());
     }
-
+    
 }
