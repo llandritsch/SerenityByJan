@@ -9,6 +9,6 @@
 |4/3/21|Testing out the Week 10 steps to get the check in and checkout to work in GitHub.|0.5|Tony|
 |4/5/21|Troubleshooting cleandb.sql|1.5|Jordyn|
 |4/7/21|Added Bootstrap and templating|.5|Jordyn|
-|||||
+|4/8/21|Setup Javascript for GET demonstration on index page and added styling |4.5|Jordyn, Lisa|
 |||||
 |||||
