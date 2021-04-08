@@ -10,6 +10,10 @@
         <h3>How to use</h3>
         <p>Supported Verbs: GET, POST, PUT</p>
         <p>To get all characters: http://localhost:8080/SerenityByJan_war/characters/</p>
+        <p>To get a character by character name:
+            http://localhost:8080/SerenityByJan_war/characters/name/{characterName}</p>
+        <p>To get a character by actor name:
+            http://localhost:8080/SerenityByJan_war/characters/actor/{actorName}</p>
         <p>To get a character by id: http://localhost:8080/SerenityByJan_war/characters/{id}</p>
         <p>To create a new character: http://localhost:8080/SerenityByJan_war/characters/ Then add characterName, actorName, and memorable quote via JSON</p>
         <p>To update an existing character: http://localhost:8080/SerenityByJan_war/characters/{id of character to update} Then pick and choose to update characterName, actorName, and memorableQuote </p>
