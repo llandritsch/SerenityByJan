@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
+import java.io.Serializable;
 
 import javax.persistence.*;
 
@@ -14,11 +15,11 @@ import javax.persistence.*;
  * @author jordynbx
  */
 @Entity(name = "Character")
-@Table(name = "characters")
+@Table(name = "Characters")
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Data
-public class Character {
+public class Character implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -36,4 +37,11 @@ public class Character {
     @Column(name = "memorable_quote")
     @NonNull
     private String memorableQuote;
+
+    public Character(int id, String characterName, String actorName, String memorbleQuote) {
+        this.id = id;
+        this.characterName = characterName;
+        this.actorName = actorName;
+        this.memorableQuote = memorbleQuote;
+    }
 }

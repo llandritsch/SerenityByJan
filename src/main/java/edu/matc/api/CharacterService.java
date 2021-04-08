@@ -124,23 +124,15 @@ public class CharacterService {
 
     //TODO Test
     @POST
-    @Path("/character/{characterName}/{actorName}/{memorableQuote}")
     @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response createCharacter(@PathParam("characterName") String characterName,
-            @PathParam("actorName") String actorName,
-            @PathParam("memorableQuote") String memorableQuote
-    ) {
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response createCharacter(Character character) {
         CharacterDao dao = new CharacterDao();
-        Character character = new Character();
-        character.setCharacterName(characterName);
-        character.setActorName(actorName);
-        character.setMemorableQuote(memorableQuote);
         int id = dao.createCharacter(character);
         if(id != 0) {
             character.setId(id);
             GenericEntity<Character> myEntity = new GenericEntity<Character>(character) {};
-            return Response.status(200).entity(myEntity).build();
+            return Response.status(201).entity(myEntity).build();
         } else {
             return Response.status(500).build();
         }
@@ -163,9 +155,14 @@ public class CharacterService {
         }
     }
 
+    /*
     @PUT
-    @Path("/characters")
+    @Path("/characters/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public String updateCharacter(@PathParam())
+    public String updateCharacter(@PathParam("id") int id) {
+
+    }
+
+     */
 }
