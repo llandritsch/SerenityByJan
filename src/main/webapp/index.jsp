@@ -7,8 +7,10 @@
     </div>
 
     <div class="mt-3 p-3 text-light">
-        <h2 style="margin-left: auto; margin-right: auto;"><b>How to use</b></h2>
-        <p>Supported Verbs: GET, POST, PUT</p>
+        <div style="margin-left: auto; margin-right: auto;">
+            <h2><b>How to use</b></h2>
+            <p>Supported Verbs: GET, POST, PUT</p>
+        </div>
         <p>To get all characters: http://localhost:8080/SerenityByJan_war/characters/</p>
         <p>To get a character by character name:
             http://localhost:8080/SerenityByJan_war/characters/name/{characterName}</p>
