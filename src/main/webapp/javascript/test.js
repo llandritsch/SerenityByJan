@@ -1,6 +1,5 @@
 const init = () => {
 
-
 }
 
 // const requestGET = async () => {
@@ -10,6 +9,11 @@ const init = () => {
 // }
 
 const requestGET = async () => {
+    if (document.getElementById('requestOutput') != null) {
+        let outputNode = document.getElementById('output');
+        outputNode.children[0].remove();
+    }
+
     let xhr = new XMLHttpRequest();
     let url = "http://localhost:8080/SerenityByJan_war/characters/";
 
@@ -32,22 +36,7 @@ const requestGET = async () => {
             pre.innerHTML = characters;
             document.getElementById("output").appendChild(pre);
 
-            if (document.getElementById('requestOutput')) {
-                let newPre = document.createElement("pre");
-                pre.setAttribute("class", "pre-scrollable");
-                pre.setAttribute("id", "requestOutput");
 
-                newPre.innerHTML = characters;
-                document.getElementById("output").replaceChild(newPre, pre);
-            } else {
-
-                let pre = document.createElement("pre");
-                pre.setAttribute("class", "pre-scrollable");
-                pre.setAttribute("id", "requestOutput");
-
-                pre.innerHTML = characters;
-                document.getElementById("output").appendChild(pre);
-            }
         }
     }
 
