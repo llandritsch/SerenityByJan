@@ -7,7 +7,7 @@
     </div>
 
     <div class="mt-3 p-3 text-light">
-        <div style="width: 50%; margin-left: auto; margin-right: auto; text-align: center;">
+        <div style="width: 40%; margin-left: auto; margin-right: auto; text-align: center; border:4px solid hotpink; border-radius: 5em; background-color: slategray; padding-top: .5em; margin-bottom: 1em">
             <h2><b>How to use</b></h2>
             <p>Supported Verbs: GET, POST, PUT</p>
         </div>
@@ -25,8 +25,10 @@
         </div>
     </div>
 
-    <div class="mt-3 p-3 text-light" style="width: 75%; margin-left: auto; margin-right: auto;">
-        <p>Test out some GET requests here</p>
+    <div class="mt-3 p-3 text-light" style="width: 75%; margin-left: auto; margin-right: auto; border: 4px solid hotpink; background-color: slategray; border-radius: 3em">
+        <div style="text-align: center">
+            <h2>Test out some GET requests here</h2>
+        </div>
         <div class="input-group">
 
             <div class="input-group mb-3">
