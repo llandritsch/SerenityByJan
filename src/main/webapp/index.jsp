@@ -11,17 +11,21 @@
             <h2><b>How to use</b></h2>
             <p>Supported Verbs: GET, POST, PUT</p>
         </div>
-        <p>Get all characters: http://localhost:8080/SerenityByJan_war/characters/</p>
-        <p>Get character by name:
-            http://localhost:8080/SerenityByJan_war/characters/name/{characterName}</p>
-        <p>Get by actor name:
-            http://localhost:8080/SerenityByJan_war/characters/actor/{actorName}</p>
-        <p>Get by id: http://localhost:8080/SerenityByJan_war/characters/{id}</p>
-        <p>Create new character: http://localhost:8080/SerenityByJan_war/characters/ Then add characterName, actorName, and memorable quote via JSON</p>
-        <p>Update existing character: http://localhost:8080/SerenityByJan_war/characters/{id of character to update} Then pick and choose to update characterName, actorName, and memorableQuote </p>
+        <div style="width: 75%; margin-left: auto; margin-right: auto;">
+            <p>Get all characters: http://localhost:8080/SerenityByJan_war/characters/</p>
+            <p>Get character by name:
+                http://localhost:8080/SerenityByJan_war/characters/name/{characterName}</p>
+            <p>Get by actor name:
+                http://localhost:8080/SerenityByJan_war/characters/actor/{actorName}</p>
+            <p>Get by id: http://localhost:8080/SerenityByJan_war/characters/{id}</p>
+            <p>Create new character: http://localhost:8080/SerenityByJan_war/characters/
+                <br/><span class="font-italic">Then add characterName, actorName, and memorable quote via JSON</span></p>
+            <p>Update existing character: http://localhost:8080/SerenityByJan_war/characters/{id of character to update}
+                <br/><span class="font-italic">Then pick and choose to update characterName, actorName, and memorableQuote</span> </p>
+        </div>
     </div>
 
-    <div class="mt-4 p-3 text-light" style="width: 75%; margin-left: auto; margin-right: auto;">
+    <div class="mt-3 p-3 text-light" style="width: 75%; margin-left: auto; margin-right: auto;">
         <p>Test out some GET requests here</p>
         <div class="input-group">
 
@@ -37,7 +41,7 @@
             </span>
         </div>
 
-        <div class="output mt-3 bg-light" id="output" style="width: 50%; margin-left: auto; margin-right: auto;">
+        <div class="output mt-3 bg-light" id="output" style="width: 75%; margin-left: auto; margin-right: auto;">
 
         </div>
     </div>
