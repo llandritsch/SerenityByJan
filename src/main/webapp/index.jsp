@@ -23,7 +23,7 @@
         <p>Test out some GET requests here</p>
         <div class="input-group">
             <span class="input-group-addon">https://localhost:8080/SerenityByJan_war/characters/</span>
-            <input type="text" class="form-control" style="width: 20px;" placeholder="1">
+            <input type="text" id="params" class="form-control" style="width: 20px;" placeholder="1">
             <span class="input-group-btn">
                 <button onclick="requestGET()">request</button>
             </span>

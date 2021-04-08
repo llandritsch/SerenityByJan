@@ -15,6 +15,8 @@ const requestGET = async () => {
     let xhr = new XMLHttpRequest();
     let url = "http://localhost:8080/SerenityByJan_war/characters/";
 
+    let params = document.getElementById("params");
+    url = url += params.value;
     xhr.open("get", url);
 
     xhr.onreadystatechange = () => {
