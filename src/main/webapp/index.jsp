@@ -7,7 +7,7 @@
     </div>
 
     <div class="mt-3 p-3 text-light">
-        <div style="margin-left: auto; margin-right: auto;">
+        <div style="width: 50%; margin-left: auto; margin-right: auto; text-align: center;">
             <h2><b>How to use</b></h2>
             <p>Supported Verbs: GET, POST, PUT</p>
         </div>
