@@ -21,7 +21,7 @@
         <p>Update existing character: http://localhost:8080/SerenityByJan_war/characters/{id of character to update} Then pick and choose to update characterName, actorName, and memorableQuote </p>
     </div>
 
-    <div class="mt-4 p-3 text-light" style="width: 50%; margin-left: auto; margin-right: auto;">
+    <div class="mt-4 p-3 text-light" style="width: 75%; margin-left: auto; margin-right: auto;">
         <p>Test out some GET requests here</p>
         <div class="input-group">
 
