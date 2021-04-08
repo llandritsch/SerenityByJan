@@ -30,8 +30,7 @@ const requestGET = async () => {
 
 
             pre.innerHTML = characters;
-            document.body.appendChild(pre);
-
+            document.getElementById("output").appendChild(pre);
 
         }
     }

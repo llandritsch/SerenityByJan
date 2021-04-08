@@ -30,9 +30,7 @@
         </div>
 
         <div class="output mt-3 bg-light" id="output" style="width: 50%; margin-left: auto; margin-right: auto;">
-<%--            <pre id="requestOutput" class="pre-scrollable">--%>
 
-<%--            </pre>--%>
         </div>
     </div>
 
