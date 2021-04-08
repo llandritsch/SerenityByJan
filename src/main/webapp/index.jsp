@@ -23,10 +23,18 @@
         <p>Test out some GET requests here</p>
         <div class="input-group">
             <span class="input-group-addon">https://localhost:8080/SerenityByJan_war/characters/</span>
-            <input type="text" class="form-control" placeholder="1">
+            <input type="text" class="form-control" style="width: 20px;" placeholder="1">
             <span class="input-group-btn">
-                <button>request</button>
+                <button onclick="requestGET()">request</button>
             </span>
+        </div>
+
+        <div class="output mt-3 bg-light" style="width: 50%; margin-left: auto; margin-right: auto;">
+            <pre id="requestOutput" class="pre-scrollable">
+                {
+                    Hi. I'm JSON. Nice to meet me.
+                }
+            </pre>
         </div>
     </div>
 

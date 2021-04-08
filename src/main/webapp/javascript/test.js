@@ -4,4 +4,10 @@ const init = () => {
     document.body.appendChild(p);
 }
 
+const requestGET = async () => {
+    const response = await fetch('http://localhost:8080/SerenityByJan_war/characters/');
+    const json = await response.json(); //extract JSON from the http response
+    // do something with myJson
+}
+
 window.onload = init;
