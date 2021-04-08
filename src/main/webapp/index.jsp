@@ -31,9 +31,7 @@
 
         <div class="output mt-3 bg-light" style="width: 50%; margin-left: auto; margin-right: auto;">
             <pre id="requestOutput" class="pre-scrollable">
-                {
-                    Hi. I'm JSON. Nice to meet me.
-                }
+
             </pre>
         </div>
     </div>

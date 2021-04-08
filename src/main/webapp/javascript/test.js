@@ -7,7 +7,7 @@ const init = () => {
 const requestGET = async () => {
     const response = await fetch('http://localhost:8080/SerenityByJan_war/characters/');
     const json = await response.json(); //extract JSON from the http response
-    // do something with myJson
+    document.getElementById('requestOutput').innerHTML = json;
 }
 
 window.onload = init;
