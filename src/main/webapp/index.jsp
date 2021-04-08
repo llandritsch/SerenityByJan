@@ -24,8 +24,14 @@
     <div class="mt-4 p-3 text-light">
         <p>Test out some GET requests here</p>
         <div class="input-group">
-            <span class="input-group-addon">https://localhost:8080/SerenityByJan_war/characters/</span>
-            <input type="text" id="params" class="form-control" style="width: 20%;" placeholder="1">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">https://localhost:8080/SerenityByJan_war/characters/</span>
+                </div>
+                <input type="text" class="form-control" id="params" placeholder="1">
+            </div>
+
             <span class="input-group-btn">
                 <button class="btn btn-success" onclick="requestGET(); return false;">request</button>
             </span>
