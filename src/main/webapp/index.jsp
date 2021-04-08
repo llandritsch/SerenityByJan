@@ -25,7 +25,7 @@
             <span class="input-group-addon">https://localhost:8080/SerenityByJan_war/characters/</span>
             <input type="text" id="params" class="form-control" style="width: 20px;" placeholder="1">
             <span class="input-group-btn">
-                <button onclick="requestGET()">request</button>
+                <button onclick="requestGET(); return false;">request</button>
             </span>
         </div>
 
