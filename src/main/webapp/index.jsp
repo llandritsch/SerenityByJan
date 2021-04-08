@@ -1,6 +1,7 @@
-<html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="head.jsp"%>
 <body>
 <h2>Hello World!</h2>
-<h3>Testing a commit!</h3>
+<p class="text-success bg-warning">Testing bootstrap</p>
 </body>
-</html>
+<%@include file="footer.jsp"%>
