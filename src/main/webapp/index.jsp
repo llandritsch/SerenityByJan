@@ -29,10 +29,10 @@
             </span>
         </div>
 
-        <div class="output mt-3 bg-light" style="width: 50%; margin-left: auto; margin-right: auto;">
-            <pre id="requestOutput" class="pre-scrollable">
+        <div class="output mt-3 bg-light" id="output" style="width: 50%; margin-left: auto; margin-right: auto;">
+<%--            <pre id="requestOutput" class="pre-scrollable">--%>
 
-            </pre>
+<%--            </pre>--%>
         </div>
     </div>
 
