@@ -9,7 +9,7 @@ const init = () => {
 // }
 
 const requestGET = async () => {
-    if (document.getElementById('requestOutput') != null) {
+    if (document.getElementById('requestOutput') != null || document.getElementById('requestOutput') != undefined) {
         let outputNode = document.getElementById('output');
         outputNode.children[0].remove();
     }
