@@ -47,7 +47,7 @@ public class CharacterService {
      */
     @GET
     @Produces("application/json")
-    @Path("{character}")
+    @Path("/name/{character}")
     public Response getByCharacterName(@PathParam("character") String name) {
         CharacterDao dao = new CharacterDao();
         List<Character> characters = dao.getCharacterByName(name);
@@ -82,22 +82,15 @@ public class CharacterService {
      */
     @GET
     @Produces("application/json")
-    @Path("/id/{id}")
+    @Path("{id}")
     public Response getById(@PathParam("id") int id) {
-        ObjectMapper mapper = new ObjectMapper();
-
         CharacterDao dao = new CharacterDao();
         Character character = dao.getCharacterById(id);
-
-        String output = "";
-
-        try {
-            output = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(character);
-        } catch (JsonProcessingException e){
-            log.error(e);
+        if (character == null) {
+            return Response.status(404).build();
         }
-
-        return Response.status(200).entity(output).build();
+        GenericEntity<Character> entity = new GenericEntity<Character>(character) {};
+        return Response.status(200).entity(entity).build();
     }
 
 
@@ -140,29 +133,39 @@ public class CharacterService {
 
     //TODO fix response and param type
     @DELETE
-    @Path("characters/{id}")
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response deleteUser(@PathParam("id") int id) {
         CharacterDao dao = new CharacterDao();
-        int charactersBeforeDelete = dao.getAllCharacters().size();
         Character characterToDelete = dao.getCharacterById(id);
         dao.deleteCharacter(characterToDelete);
-        int charactersAfterDelete = dao.getAllCharacters().size();
-        if (charactersAfterDelete == charactersBeforeDelete - 1) {
-            return Response.status(200).build();
-        } else {
-            return Response.status(500).build();
-        }
+        return Response.status(204).build();
     }
 
-    /*
+
     @PUT
-    @Path("/characters/{id}")
+    @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public String updateCharacter(@PathParam("id") int id) {
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response updateCharacter(@PathParam("id") int id, Character characterData) {
+        CharacterDao dao = new CharacterDao();
+        Character character = dao.getCharacterById(id);
+
+        if (characterData.getMemorableQuote() != null) {
+            character.setMemorableQuote(characterData.getMemorableQuote());
+        }
+
+        if (characterData.getCharacterName() != null) {
+            character.setCharacterName(characterData.getCharacterName());
+        }
+
+        if (characterData.getActorName() != null) {
+            character.setActorName(characterData.getActorName());
+        }
+
+        dao.updateCharacter(character);
+        GenericEntity<Character> myEntity = new GenericEntity<Character>(character) {};
+        return Response.status(200).entity(myEntity).build();
 
     }
-
-     */
 }
