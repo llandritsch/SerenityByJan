@@ -7,7 +7,7 @@
     </div>
 
     <div class="mt-3 p-3 text-light">
-        <h3>How to use</h3>
+        <h2><b>How to use</b></h2>
         <p>Supported Verbs: GET, POST, PUT</p>
         <p>To get all characters: http://localhost:8080/SerenityByJan_war/characters/</p>
         <p>To get a character by character name:
@@ -23,9 +23,9 @@
         <p>Test out some GET requests here</p>
         <div class="input-group">
             <span class="input-group-addon">https://localhost:8080/SerenityByJan_war/characters/</span>
-            <input type="text" id="params" class="form-control" style="width: 20px;" placeholder="1">
+            <input type="text" id="params" class="form-control" style="width: 20%;" placeholder="1">
             <span class="input-group-btn">
-                <button onclick="requestGET(); return false;">request</button>
+                <button class="btn btn-success" onclick="requestGET(); return false;">request</button>
             </span>
         </div>
 
