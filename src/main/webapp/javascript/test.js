@@ -1,7 +1,5 @@
 const init = () => {
-    let p = document.createElement("p");
-    p.innerHTML = "Here is some text from javascript!";
-    document.body.appendChild(p);
+
 
 }
 
@@ -34,6 +32,22 @@ const requestGET = async () => {
             pre.innerHTML = characters;
             document.getElementById("output").appendChild(pre);
 
+            if (document.getElementById('requestOutput')) {
+                let newPre = document.createElement("pre");
+                pre.setAttribute("class", "pre-scrollable");
+                pre.setAttribute("id", "requestOutput");
+
+                newPre.innerHTML = characters;
+                document.getElementById("output").replaceChild(newPre, pre);
+            } else {
+
+                let pre = document.createElement("pre");
+                pre.setAttribute("class", "pre-scrollable");
+                pre.setAttribute("id", "requestOutput");
+
+                pre.innerHTML = characters;
+                document.getElementById("output").appendChild(pre);
+            }
         }
     }
 
