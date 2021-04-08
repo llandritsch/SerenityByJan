@@ -7,7 +7,7 @@
     </div>
 
     <div class="mt-3 p-3 text-light">
-        <h2><b>How to use</b></h2>
+        <h2 style="margin-left: auto; margin-right: auto;"><b>How to use</b></h2>
         <p>Supported Verbs: GET, POST, PUT</p>
         <p>To get all characters: http://localhost:8080/SerenityByJan_war/characters/</p>
         <p>To get a character by character name:
