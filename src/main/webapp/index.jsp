@@ -12,16 +12,24 @@
             <p>Supported Verbs: GET, POST, PUT</p>
         </div>
         <div style="width: 75%; margin-left: auto; margin-right: auto;">
-            <p>Get all characters: http://localhost:8080/SerenityByJan_war/characters/</p>
-            <p>Get character by name:
-                http://localhost:8080/SerenityByJan_war/characters/name/{characterName}</p>
-            <p>Get by actor name:
-                http://localhost:8080/SerenityByJan_war/characters/actor/{actorName}</p>
-            <p>Get by id: http://localhost:8080/SerenityByJan_war/characters/{id}</p>
-            <p>Create new character: http://localhost:8080/SerenityByJan_war/characters/
-                <br/><span class="font-italic">Then add characterName, actorName, and memorable quote via JSON</span></p>
-            <p>Update existing character: http://localhost:8080/SerenityByJan_war/characters/{id of character to update}
-                <br/><span class="font-italic">Then pick and choose to update characterName, actorName, and memorableQuote</span> </p>
+            <h4>Requests that will work on both the website and Postman (or equivalent):</h4>
+            <ul>
+                <li><u>Get All Characters</u>: http://localhost:8080/SerenityByJan_war/characters/</li>
+                <li><u>Get Character by id</u>: http://localhost:8080/SerenityByJan_war/characters/{id}</li>
+                <li><u>Get Character by Character Name</u>:
+                    http://localhost:8080/SerenityByJan_war/characters/name/{characterName}</li>
+                <li><u>Get Character by Actor Name</u>:
+                    http://localhost:8080/SerenityByJan_war/characters/actor/{actorName}</li>
+            </ul>
+            <h4>Requests that will work on Postman (or equivalent):</h4>
+            <ul>
+                <li><u>Create a New Character</u>: http://localhost:8080/SerenityByJan_war/characters/
+                    <br/><span class="font-italic">Then add characterName, actorName, and memorable quote via JSON.  Example:</span>
+                </li>
+                <li><u>Update an Existing Character</u>: http://localhost:8080/SerenityByJan_war/characters/{id of character to update}
+                    <br/><span class="font-italic">Then pick and choose to update the characterName, actorName, and/or memorableQuote.</span>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -39,11 +47,11 @@
             </div>
 
             <span class="input-group-btn">
-                <button class="btn btn-success" onclick="requestGET(); return false;">request</button>
+                <button class="btn btn-success" onclick="requestGET(); return false;">Request</button>
             </span>
         </div>
 
-        <div class="output mt-3 bg-light" id="output" style="width: 75%; margin-left: auto; margin-right: auto;">
+        <div class="output mt-3 bg-light mb-5" id="output" style="width: 75%; margin-left: auto; margin-right: auto;">
 
         </div>
     </div>
