@@ -30,7 +30,7 @@
                     <br/><span class="font-italic">Then pick and choose to update the characterName, actorName, and/or memorableQuote.</span>
                 </li>
             </ul>
-            <h5>Note: The base Application URL on AWS is: http://18.220.130.184:8080/OfficeCharacterAPI/</h5>
+            <h5><u>Note</u>: The base Application URL on AWS is: http://18.220.130.184:8080/OfficeCharacterAPI/</h5>
         </div>
     </div>
 
