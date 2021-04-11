@@ -13,3 +13,4 @@
 |4/09/21|Got started on Part 1 of the presentation.|1|
 |4/10/21|Completed the presentation.|4|
 |4/11/21|Troubleshooting why the Application is only working locally.|2|
+|4/11/21|Troubleshooting AWS|2|Jordyn|
