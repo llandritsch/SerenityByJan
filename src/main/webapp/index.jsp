@@ -30,10 +30,7 @@
                     <br/><span class="font-italic">Then pick and choose to update the characterName, actorName, and/or memorableQuote.</span>
                 </li>
             </ul>
-<<<<<<< HEAD
             <h5><u>Note</u>: The base Application URL on AWS is: http://18.220.130.184:8080/OfficeCharacterAPI/</h5>
-=======
->>>>>>> parent of 079d0c8... Added a statement in the index to show the base application url on AWS.
         </div>
     </div>
 

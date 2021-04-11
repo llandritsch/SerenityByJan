@@ -16,7 +16,7 @@ const requestGET = async () => {
 
     let xhr = new XMLHttpRequest();
     let url = "http://localhost:8080/SerenityByJan_war/characters/";
-    // let url = "http://18.220.130.184:8080/OfficeCharacterAPI/characters/";
+    // let url = "http://localhost:8080/OfficeCharacterAPI/characters/";
 
     let params = document.getElementById("params");
     url = url += params.value;
