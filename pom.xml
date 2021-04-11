@@ -5,13 +5,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>SerenityByJan</artifactId>
+  <artifactId>OfficeCharacterAPI</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>SerenityByJan Maven Webapp</name>
+  <name>OfficeCharacterAPI Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>http://18.219.146.156:8080/OfficeCharacterAPI/</url>
 
   <properties>
     <maven.compiler.release>11</maven.compiler.release>
