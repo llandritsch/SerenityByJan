@@ -9,7 +9,7 @@ const requestGET = async () => {
     }
 
     let xhr = new XMLHttpRequest();
-    let url = "http://18.219.146.156:8080/OfficeCharacterAPI/characters/";
+    let url = "http://18.219.146.156:8080/SerenityByJan/characters/";
 
     let params = document.getElementById("params");
     url = url += params.value;
