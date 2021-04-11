@@ -10,5 +10,6 @@
 |4/5/21|Troubleshooting cleandb.sql|1.5|Jordyn|
 |4/7/21|Added Bootstrap and templating|.5|Jordyn|
 |4/8/21|Setup Javascript for GET demonstration on index page and added styling |4.5|Jordyn, Lisa|
-|||||
-|||||
+|4/09/21|Got started on Part 1 of the presentation.|1|
+|4/10/21|Completed the presentation.|4|
+|4/11/21|Troubleshooting why the Application is only working locally.|2|
