@@ -15,7 +15,7 @@ import javax.persistence.*;
  * @author jordynbx
  */
 @Entity(name = "Character")
-@Table(name = "Characters")
+@Table(name = "characters")
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Data
