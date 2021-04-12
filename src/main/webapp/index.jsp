@@ -14,23 +14,23 @@
         <div style="width: 75%; margin-left: auto; margin-right: auto;">
             <h4>Requests that will work on both the website and Postman (or equivalent):</h4>
             <ul>
-                <li><u>Get All Characters</u>: http://localhost:8080/SerenityByJan_war/characters/</li>
-                <li><u>Get Character by id</u>: http://localhost:8080/SerenityByJan_war/characters/{id}</li>
+                <li><u>Get All Characters</u>: http://18.219.146.156:8080/OfficeCharacterAPI/characters/</li>
+                <li><u>Get Character by id</u>: http://18.219.146.156:8080/OfficeCharacterAPI/characters/{id}</li>
                 <li><u>Get Character by Character Name</u>:
-                    http://localhost:8080/SerenityByJan_war/characters/name/{characterName}</li>
+                    http://18.219.146.156:8080/OfficeCharacterAPI/characters/name/{characterName}</li>
                 <li><u>Get Character by Actor Name</u>:
-                    http://localhost:8080/SerenityByJan_war/characters/actor/{actorName}</li>
+                    http://18.219.146.156:8080/OfficeCharacterAPI/characters/actor/{actorName}</li>
             </ul>
             <h4>Requests that will work on Postman (or equivalent):</h4>
             <ul>
-                <li><u>Create a New Character</u>: http://localhost:8080/SerenityByJan_war/characters/
+                <li><u>Create a New Character</u>: http://18.219.146.156:8080/OfficeCharacterAPI/characters/
                     <br/><span class="font-italic">Then add characterName, actorName, and memorable quote via JSON.  Example:</span>
                 </li>
-                <li><u>Update an Existing Character</u>: http://localhost:8080/SerenityByJan_war/characters/{id of character to update}
+                <li><u>Update an Existing Character</u>: http://18.219.146.156:8080/OfficeCharacterAPI/characters/{id of character to update}
                     <br/><span class="font-italic">Then pick and choose to update the characterName, actorName, and/or memorableQuote.</span>
                 </li>
             </ul>
-            <h5><u>Note</u>: The base Application URL on AWS is: http://18.220.130.184:8080/OfficeCharacterAPI/</h5>
+            <h5><u>Note</u>: The base Application URL on AWS is: http://18.219.146.156:8080/OfficeCharacterAPI/</h5>
         </div>
     </div>
 
@@ -42,7 +42,7 @@
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon3">https://localhost:8080/SerenityByJan_war/characters/</span>
+                    <span class="input-group-text" id="basic-addon3">http://18.219.146.156:8080/OfficeCharacterAPI/characters/</span>
                 </div>
                 <input type="text" class="form-control" id="params" placeholder="1">
             </div>
