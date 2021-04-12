@@ -42,7 +42,7 @@
 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon3">http://18.219.146.156:8080/SerenityByJan/characters/</span>
+                    <span class="input-group-text" id="basic-addon3">http://18.219.146.156:8080/OfficeCharacterAPI/characters/</span>
                 </div>
                 <input type="text" class="form-control" id="params" placeholder="1">
             </div>
