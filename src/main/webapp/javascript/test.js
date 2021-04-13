@@ -2,12 +2,6 @@ const init = () => {
 
 }
 
-// const requestGET = async () => {
-//     const response = await fetch('http://localhost:8080/SerenityByJan_war/characters/');
-//     console.log(response);
-//     document.getElementById('requestOutput').innerHTML = response;
-// }
-
 const requestGET = async () => {
     if (document.getElementById('requestOutput') != null || document.getElementById('requestOutput') != undefined) {
         let outputNode = document.getElementById('output');
@@ -15,7 +9,7 @@ const requestGET = async () => {
     }
 
     let xhr = new XMLHttpRequest();
-    // let url = "http://localhost:8080/SerenityByJan_war/characters/";
+
     let url = "http://localhost:8080/OfficeCharacterAPI/characters/";
 
     let params = document.getElementById("params");
@@ -26,7 +20,6 @@ const requestGET = async () => {
         if(xhr.readyState == 4) {
 
             let characters = xhr.responseText;
-            // console.warn(xhr.responseText);
             console.log(characters);
 
             let pre = document.createElement("pre");
@@ -36,7 +29,6 @@ const requestGET = async () => {
 
             pre.innerHTML = characters;
             document.getElementById("output").appendChild(pre);
-
 
         }
     }

@@ -13,7 +13,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-//// TODO investigate characters that are showing up weird in output
 
 /**
  * The type Character service.
