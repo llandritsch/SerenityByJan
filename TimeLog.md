@@ -17,5 +17,5 @@
 |4/10/21|Completed the presentation.|4|Tony|
 |4/11/21|Troubleshooting why the Application is only working locally.|2|Tony|
 |4/11/21|Troubleshooting AWS|2|Jordyn|
-|4/12/21|Troubleshooting AWS|2|Jordyn|
+|4/12/21|Troubleshooting AWS, prepping videos and uploading to YouTube|2.5|Jordyn|
 4/12/21|Troubleshooting AWS |4|Lisa|
